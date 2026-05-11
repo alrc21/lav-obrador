@@ -20,9 +20,9 @@ export function Nav() {
     <nav
       className="sticky top-0 z-40 flex h-16 items-center justify-between px-6 transition-all md:px-8"
       style={{
-        backgroundColor: scrolled ? "rgba(247, 241, 232, 0.92)" : "transparent",
-        backdropFilter: scrolled ? "blur(10px)" : "none",
+        backgroundColor: scrolled ? "var(--color-bg)" : "transparent",
         borderBottom: scrolled ? "1px solid var(--color-line)" : "1px solid transparent",
+        boxShadow: scrolled ? "0 1px 0 var(--color-line)" : "none",
       }}
     >
       <Link

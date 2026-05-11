@@ -29,7 +29,7 @@ export function Visita() {
                 href="https://maps.app.goo.gl/7YchgGxdwQcQeuHn6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-xs uppercase tracking-widest transition hover:opacity-70"
+                className="inline-flex items-center gap-1 py-2 text-xs uppercase tracking-widest transition hover:opacity-70"
                 style={{ color: "var(--color-muted)" }}
               >
                 Abrir en Maps
@@ -84,7 +84,7 @@ export function Visita() {
               </div>
 
               <p
-                className="text-sm italic"
+                className="text-sm"
                 style={{
                   fontFamily: "var(--font-display)",
                   color: "var(--color-muted)",

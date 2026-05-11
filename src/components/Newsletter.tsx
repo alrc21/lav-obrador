@@ -57,7 +57,6 @@ export function Newsletter() {
 
           {submitted ? (
             <p
-              className="italic"
               style={{
                 fontFamily: "var(--font-display)",
                 color: "var(--color-accent)",
@@ -74,6 +73,8 @@ export function Newsletter() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="tu@email.com"
                 aria-label="Email"
+                aria-invalid={!!error}
+                aria-describedby="newsletter-error"
                 className="w-full max-w-sm border-0 border-b bg-transparent pb-2 text-center text-base outline-none transition focus:border-current"
                 style={{
                   borderBottomWidth: "1px",
@@ -82,7 +83,12 @@ export function Newsletter() {
                 }}
               />
               {error && (
-                <p className="text-xs" style={{ color: "#b91c1c" }}>
+                <p
+                  id="newsletter-error"
+                  role="alert"
+                  className="text-xs"
+                  style={{ color: "var(--color-danger)" }}
+                >
                   {error}
                 </p>
               )}

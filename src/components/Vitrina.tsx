@@ -29,7 +29,7 @@ export function Vitrina() {
                   />
                 </div>
                 <p
-                  className="mt-6 text-center text-xl italic"
+                  className="mt-6 text-center text-xl"
                   style={{
                     fontFamily: "var(--font-display)",
                     color: "var(--color-ink)",

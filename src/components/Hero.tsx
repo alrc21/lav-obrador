@@ -41,10 +41,10 @@ export function Hero() {
 
           <Link
             href="/tienda"
-            className="group inline-flex items-center gap-3 border border-white/40 px-8 py-3 text-sm uppercase tracking-widest backdrop-blur-sm transition hover:bg-white/10"
+            className="group inline-flex items-center gap-3 py-2 text-xs uppercase tracking-[0.3em] transition hover:opacity-70"
             style={{ color: "var(--color-bg)" }}
           >
-            Ver el obrador
+            <span className="border-b border-current pb-1">Ver el obrador</span>
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </Link>
         </div>

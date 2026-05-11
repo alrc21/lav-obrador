@@ -6,7 +6,7 @@ export function Manifesto() {
       <div className="mx-auto max-w-4xl text-center">
         <ScrollReveal>
           <h2
-            className="text-3xl leading-tight md:text-5xl lg:text-6xl"
+            className="text-3xl leading-tight md:text-5xl"
             style={{
               fontFamily: "var(--font-display)",
               fontStyle: "italic",

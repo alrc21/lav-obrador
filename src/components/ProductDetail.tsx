@@ -129,6 +129,7 @@ export function ProductDetail({ product, related }: Props) {
               <button
                 onClick={() => setQty((q) => Math.max(1, q - 1))}
                 aria-label="Disminuir cantidad"
+                className="flex h-9 w-9 items-center justify-center"
                 style={{ color: "var(--color-accent)" }}
               >
                 <Minus size={14} strokeWidth={1.5} />
@@ -137,6 +138,7 @@ export function ProductDetail({ product, related }: Props) {
               <button
                 onClick={() => setQty((q) => q + 1)}
                 aria-label="Aumentar cantidad"
+                className="flex h-9 w-9 items-center justify-center"
                 style={{ color: "var(--color-accent)" }}
               >
                 <Plus size={14} strokeWidth={1.5} />

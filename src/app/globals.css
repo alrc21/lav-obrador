@@ -8,6 +8,7 @@
   --color-muted: #8B7A6E;
   --color-ink: #2A1F1E;
   --color-line: #E0D4BF;
+  --color-danger: #9B3A2E;
 
   /* Fonts (assigned via next/font CSS variables) */
   --font-display: var(--font-fraunces);
@@ -40,11 +41,29 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Remove the harsh default outline when the element provides its own focus indicator via :focus-visible above */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 h1, h2, h3 {
   font-family: var(--font-display), Georgia, serif;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--color-ink);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--color-muted);
 }
 
 ::selection {

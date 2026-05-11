@@ -71,7 +71,7 @@ function SuccessContent() {
 
       {order && (
         <p
-          className="mb-12 text-base italic"
+          className="mb-12 text-base"
           style={{
             fontFamily: "var(--font-display)",
             color: "var(--color-muted)",

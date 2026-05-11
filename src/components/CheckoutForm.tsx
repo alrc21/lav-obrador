@@ -78,7 +78,7 @@ export function CheckoutForm() {
     return (
       <div className="mx-auto max-w-md px-6 py-32 text-center">
         <p
-          className="mb-6 text-2xl italic"
+          className="mb-6 text-2xl"
           style={{
             fontFamily: "var(--font-display)",
             color: "var(--color-muted)",

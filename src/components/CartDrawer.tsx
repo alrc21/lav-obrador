@@ -82,7 +82,7 @@ export function CartDrawer() {
           {items.length === 0 ? (
             <div className="flex h-full flex-col items-center justify-center px-6 text-center">
               <p
-                className="mb-6 italic"
+                className="mb-6"
                 style={{
                   fontFamily: "var(--font-display)",
                   color: "var(--color-muted)",
@@ -132,7 +132,7 @@ export function CartDrawer() {
                         <button
                           onClick={() => remove(item.slug)}
                           aria-label={`Eliminar ${p.name}`}
-                          className="transition hover:opacity-70"
+                          className="flex h-8 w-8 items-center justify-center transition hover:opacity-70"
                           style={{ color: "var(--color-muted)" }}
                         >
                           <Trash2 size={14} strokeWidth={1.5} />
@@ -149,7 +149,7 @@ export function CartDrawer() {
                           <button
                             onClick={() => setQty(item.slug, item.quantity - 1)}
                             aria-label="Disminuir"
-                            className="transition hover:opacity-70"
+                            className="flex h-8 w-8 items-center justify-center transition hover:opacity-70"
                           >
                             <Minus size={12} strokeWidth={1.5} />
                           </button>
@@ -159,7 +159,7 @@ export function CartDrawer() {
                           <button
                             onClick={() => setQty(item.slug, item.quantity + 1)}
                             aria-label="Aumentar"
-                            className="transition hover:opacity-70"
+                            className="flex h-8 w-8 items-center justify-center transition hover:opacity-70"
                           >
                             <Plus size={12} strokeWidth={1.5} />
                           </button>

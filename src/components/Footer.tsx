@@ -42,7 +42,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/lavobrador"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:opacity-100 opacity-80 transition"
@@ -80,7 +80,17 @@ export function Footer() {
           style={{ borderColor: "rgba(247, 241, 232, 0.15)" }}
         >
           <span>© {new Date().getFullYear()} LAV Obrador</span>
-          <span>Diseñado por Alia Studio</span>
+          <span>
+            Diseñado por{" "}
+            <a
+              href="https://aliastudio.cc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-2 hover:underline"
+            >
+              Alia Studio
+            </a>
+          </span>
         </div>
       </div>
     </footer>
