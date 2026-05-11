@@ -36,7 +36,7 @@ export function Hero() {
             className="text-sm uppercase tracking-[0.3em]"
             style={{ color: "var(--color-bg)" }}
           >
-            Pan y café · Próximamente
+            Pan y café · Playa Patacona
           </p>
 
           <Link

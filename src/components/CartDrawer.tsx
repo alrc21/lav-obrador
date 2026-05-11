@@ -28,17 +28,6 @@ export function CartDrawer() {
 
   const subtotal = cartSubtotal(items);
 
-  const whatsappMessage = encodeURIComponent(
-    `Hola LAV, me gustaría hacer este pedido:\n\n${items
-      .map((i) => {
-        const p = products.find((pp) => pp.slug === i.slug);
-        return p ? `· ${p.name} × ${i.quantity}` : "";
-      })
-      .filter(Boolean)
-      .join("\n")}\n\nTotal: ${formatPrice(subtotal)}`,
-  );
-  const whatsappUrl = `https://wa.me/?text=${whatsappMessage}`;
-
   return (
     <>
       {/* Backdrop */}
@@ -212,10 +201,9 @@ export function CartDrawer() {
                 {formatPrice(subtotal)}
               </span>
             </div>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/checkout"
+              onClick={close}
               className="block w-full py-4 text-center text-xs uppercase tracking-widest transition hover:opacity-90"
               style={{
                 backgroundColor: "var(--color-accent)",
@@ -223,13 +211,13 @@ export function CartDrawer() {
                 borderRadius: "var(--radius-sm)",
               }}
             >
-              Pedir por WhatsApp
-            </a>
+              Continuar al pago
+            </Link>
             <p
               className="mt-3 text-center text-xs"
               style={{ color: "var(--color-muted)" }}
             >
-              Pago online próximamente.
+              Envío gratuito a partir de 30€.
             </p>
           </footer>
         )}
