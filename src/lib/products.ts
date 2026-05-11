@@ -12,38 +12,38 @@ export const products: Product[] = [
     ingredients: ["Harina de trigo", "Manteca", "Azúcar", "Huevo", "Levadura", "Sal"],
     allergens: ["Gluten", "Lácteos", "Huevo"],
     image:
-      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Medialuna recién horneada",
     featured: true,
   },
   {
-    slug: "croissant",
-    name: "Croissant",
-    category: "viennoiserie",
-    price: 260,
-    weight: "80g",
+    slug: "alfajor",
+    name: "Alfajor",
+    category: "dulce",
+    price: 280,
+    weight: "60g",
     description:
-      "Croissant clásico francés, 27 capas de masa laminada con mantequilla AOP.",
-    ingredients: ["Harina de trigo", "Mantequilla AOP", "Leche", "Levadura", "Sal"],
-    allergens: ["Gluten", "Lácteos"],
+      "Dos tapas de galleta rellenas de dulce de leche artesanal, bañadas en chocolate o coronadas de azúcar glas.",
+    ingredients: ["Harina", "Manteca", "Dulce de leche", "Chocolate", "Azúcar"],
+    allergens: ["Gluten", "Lácteos", "Huevo"],
     image:
-      "https://images.unsplash.com/photo-1555507036-ab41f1f44cd7?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Croissant dorado con capas visibles",
+      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Alfajor argentino relleno de dulce de leche",
     featured: true,
   },
   {
-    slug: "brioche",
-    name: "Brioche",
+    slug: "rolles-de-canela",
+    name: "Rolles de Canela",
     category: "panes",
-    price: 480,
-    weight: "400g",
+    price: 320,
+    weight: "120g",
     description:
-      "Pan brioche francés, miga dorada y esponjosa. Ideal para tostar o acompañar café.",
-    ingredients: ["Harina", "Mantequilla AOP", "Huevos", "Leche", "Azúcar", "Levadura"],
+      "Bollo enrollado de masa brioche con canela y azúcar moreno. Glaseado de queso crema al salir del horno.",
+    ingredients: ["Harina", "Mantequilla", "Canela", "Azúcar moreno", "Queso crema", "Huevo"],
     allergens: ["Gluten", "Lácteos", "Huevo"],
     image:
-      "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Pan brioche dorado en molde",
+      "https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Rolle de canela glaseado",
   },
   {
     slug: "cafe-especialidad",
@@ -76,7 +76,6 @@ export function getFeaturedProducts(): Product[] {
 export function getRelatedProducts(slug: string, limit = 3): Product[] {
   const product = getProduct(slug);
   if (!product) return [];
-  return products
-    .filter((p) => p.category === product.category && p.slug !== slug)
-    .slice(0, limit);
+  // For a small catalog, return any other product, not just same-category
+  return products.filter((p) => p.slug !== slug).slice(0, limit);
 }
