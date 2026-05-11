@@ -18,7 +18,7 @@ export function Footer() {
               style={{ filter: "brightness(0) invert(1) opacity(0.9)" }}
             />
             <p className="mt-6 max-w-xs text-sm opacity-70">
-              Pan de masa madre y café de especialidad.
+              Hojaldre y café de especialidad junto al Mediterráneo.
             </p>
           </div>
 

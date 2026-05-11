@@ -13,9 +13,9 @@ export function Manifesto() {
               color: "var(--color-ink)",
             }}
           >
-            Masa madre, fermentación lenta,
+            Hojaldre, café
             <br />
-            cada mañana.
+            y Mediterráneo.
           </h2>
         </ScrollReveal>
       </div>

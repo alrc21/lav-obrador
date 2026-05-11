@@ -12,10 +12,9 @@ export function Hero() {
         sizes="100vw"
         className="object-cover"
       />
-      {/* Subtle dark overlay for legibility */}
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: "rgba(42, 31, 30, 0.25)" }}
+        style={{ backgroundColor: "rgba(42, 31, 30, 0.35)" }}
       />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-between px-6 py-12 md:py-20">
@@ -24,10 +23,12 @@ export function Hero() {
         <Image
           src="/logo.svg"
           alt="LAV Obrador"
-          width={140}
-          height={95}
+          width={200}
+          height={136}
           priority
-          style={{ filter: "brightness(0) invert(1)" }}
+          style={{
+            filter: "brightness(0) invert(1) drop-shadow(0 0 40px rgba(42, 31, 30, 0.5))",
+          }}
         />
 
         <div className="flex flex-1 flex-col items-center justify-end gap-8">

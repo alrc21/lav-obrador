@@ -17,22 +17,22 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lav-obrador.vercel.app"),
-  title: "LAV Obrador · Pan y café de especialidad",
+  title: "LAV Obrador · Hojaldre y café junto al Mediterráneo",
   description:
-    "Obrador artesanal de pan de masa madre y café de especialidad. Próximamente.",
+    "Obrador de viennoiserie y café de especialidad en Playa Patacona, Valencia. Próximamente.",
   openGraph: {
     type: "website",
     siteName: "LAV Obrador",
-    title: "LAV Obrador · Pan y café de especialidad",
+    title: "LAV Obrador · Hojaldre y café junto al Mediterráneo",
     description:
-      "Obrador artesanal de pan de masa madre y café de especialidad.",
+      "Obrador de viennoiserie y café de especialidad en Playa Patacona, Valencia.",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     locale: "es_ES",
   },
   twitter: {
     card: "summary_large_image",
     title: "LAV Obrador",
-    description: "Pan de masa madre y café de especialidad.",
+    description: "Hojaldre y café de especialidad junto al Mediterráneo.",
     images: ["/og-image.png"],
   },
 };

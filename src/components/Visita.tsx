@@ -6,20 +6,35 @@ export function Visita() {
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 md:items-center">
           <ScrollReveal>
-            <div
-              className="relative aspect-[4/3] w-full overflow-hidden"
-              style={{ borderRadius: "var(--radius-md)" }}
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.2!2d-3.7038!3d40.4168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI1JzAwLjUiTiAzwrA0MicxMy43Ilc!5e0!3m2!1ses!2ses!4v1715000000000"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Ubicación de LAV Obrador"
-              />
+            <div className="space-y-4">
+              <div
+                className="relative aspect-[4/3] w-full overflow-hidden"
+                style={{
+                  borderRadius: "var(--radius-md)",
+                  filter: "grayscale(85%) contrast(1.05) saturate(0.4) opacity(0.95)",
+                }}
+              >
+                <iframe
+                  src="https://maps.google.com/maps?q=Calle+del+Mar+d%27Alboran+10c+Playa+Patacona+Valencia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Ubicación de LAV Obrador en Playa Patacona"
+                />
+              </div>
+              <a
+                href="https://maps.app.goo.gl/7YchgGxdwQcQeuHn6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-xs uppercase tracking-widest transition hover:opacity-70"
+                style={{ color: "var(--color-muted)" }}
+              >
+                Abrir en Maps
+                <span>→</span>
+              </a>
             </div>
           </ScrollReveal>
 
@@ -46,10 +61,10 @@ export function Visita() {
             <address className="space-y-6 not-italic">
               <div>
                 <p className="text-base" style={{ color: "var(--color-accent)" }}>
-                  Calle del Obrador, 1
+                  Calle del Mar d'Alboran, 10C
                 </p>
                 <p className="text-base" style={{ color: "var(--color-muted)" }}>
-                  Madrid, 28001
+                  Playa Patacona, Valencia
                 </p>
               </div>
 
@@ -75,7 +90,7 @@ export function Visita() {
                   color: "var(--color-muted)",
                 }}
               >
-                Pan recién horneado desde las 7:30.
+                Café y hojaldre, junto al mar.
               </p>
             </address>
           </ScrollReveal>
